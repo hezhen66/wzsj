@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-glass-default="off">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一直羡慕 macOS 的 Alfred，后来发现 Windows 上 uTools 加 Quicker 基本能补齐。uTools 设成 Alt+空格，常用的插件是翻译、剪贴板历史、JSON 格式化、时间戳转换和取色器；Quicker 绑在鼠标中键上，专门处理「选中一段东西然后做点什么」。装完第一周最有感的其实是剪贴板历史。">
+    <title>Windows 用户也能有 Alfred：我用 uTools + Quicker 拼出自己的启动器 · ISEKAI</title>
+    <script>
+      // 首屏防闪烁：挂载前按 localStorage / 系统偏好先设好主题
+      ;(function () {
+        var t
+        try { t = localStorage.getItem('blog-theme') } catch (_) {}
+        if (/^(?:\/wzsj)?\/articles\/[^/]+\/?$/.test(window.location.pathname)) t = 'light'
+        if (t !== 'dark' && t !== 'light') {
+          t =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+        }
+        document.documentElement.setAttribute('data-theme', t)
+        var bg=null
+        try{bg=JSON.parse(localStorage.getItem('isekai.home-background.light.v2')||'null')}catch(_){}
+        if(!bg){try{var old=JSON.parse(localStorage.getItem('isekai.home-background.light.v1')||'null');if(old)bg={enabled:old.blurred}}catch(_){} }
+        var glass=bg&&typeof bg.enabled==='boolean'?bg.enabled:document.documentElement.getAttribute('data-glass-default')!=='off'
+        document.documentElement.setAttribute('data-glass-background',t==='light'&&glass?'on':'off')
+      })()
+    </script>
+    <style>html[data-theme=light][data-glass-background=on] body{background-color:#dbe0dc}</style>
+    <script type="module" crossorigin src="/wzsj/assets/index-BeJOt7Q8.js"></script>
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/runtime-core.esm-bundler-CjECEK8t.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/pinia-D3bx2cP8.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/account-D-lA9TFK.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+    <link rel="stylesheet" crossorigin href="/wzsj/assets/index-ZtGBu7MJ.css">
+  <script>try{var p=sessionStorage.getItem('pages-return-path');if(p){sessionStorage.removeItem('pages-return-path');if(p.startsWith('/wzsj/'))history.replaceState(null,'',p)}}catch(e){}</script><meta property="og:type" content="article">
+<meta property="og:site_name" content="ISEKAI">
+<meta property="og:title" content="Windows 用户也能有 Alfred：我用 uTools + Quicker 拼出自己的启动器">
+<meta property="og:description" content="一直羡慕 macOS 的 Alfred，后来发现 Windows 上 uTools 加 Quicker 基本能补齐。uTools 设成 Alt+空格，常用的插件是翻译、剪贴板历史、JSON 格式化、时间戳转换和取色器；Quicker 绑在鼠标中键上，专门处理「选中一段东西然后做点什么」。装完第一周最有感的其实是剪贴板历史。">
+<meta property="og:url" content="https://hezhen66.github.io/wzsj/articles/utools-quicker">
+<meta property="og:image" content="https://picsum.photos/seed/blog-utools/1200/800">
+<meta property="article:published_time" content="2026-07-23"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Windows 用户也能有 Alfred：我用 uTools + Quicker 拼出自己的启动器"><meta name="twitter:description" content="一直羡慕 macOS 的 Alfred，后来发现 Windows 上 uTools 加 Quicker 基本能补齐。uTools 设成 Alt+空格，常用的插件是翻译、剪贴板历史、JSON 格式化、时间戳转换和取色器；Quicker 绑在鼠标中键上，专门处理「选中一段东西然后做点什么」。装完第一周最有感的其实是剪贴板历史。"><link rel="canonical" href="https://hezhen66.github.io/wzsj/articles/utools-quicker"></head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

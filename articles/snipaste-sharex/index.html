@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-glass-default="off">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Snipaste 的 F1 贴图是我每天按得最多的快捷键，看教程时把参考图钉在屏幕角落，在编辑器和浏览器之间来回对照特别方便，它的取色器也成了我写 CSS 时的默认工具。ShareX 则包揽所有麻烦事：滚动长截图、录屏转 GIF、截图后自动加水印并上传到我自己的图床、按窗口标题自动命名。">
+    <title>截图这件事我分给两个软件：Snipaste 随手截，ShareX 干批量活 · ISEKAI</title>
+    <script>
+      // 首屏防闪烁：挂载前按 localStorage / 系统偏好先设好主题
+      ;(function () {
+        var t
+        try { t = localStorage.getItem('blog-theme') } catch (_) {}
+        if (/^(?:\/wzsj)?\/articles\/[^/]+\/?$/.test(window.location.pathname)) t = 'light'
+        if (t !== 'dark' && t !== 'light') {
+          t =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+        }
+        document.documentElement.setAttribute('data-theme', t)
+        var bg=null
+        try{bg=JSON.parse(localStorage.getItem('isekai.home-background.light.v2')||'null')}catch(_){}
+        if(!bg){try{var old=JSON.parse(localStorage.getItem('isekai.home-background.light.v1')||'null');if(old)bg={enabled:old.blurred}}catch(_){} }
+        var glass=bg&&typeof bg.enabled==='boolean'?bg.enabled:document.documentElement.getAttribute('data-glass-default')!=='off'
+        document.documentElement.setAttribute('data-glass-background',t==='light'&&glass?'on':'off')
+      })()
+    </script>
+    <style>html[data-theme=light][data-glass-background=on] body{background-color:#dbe0dc}</style>
+    <script type="module" crossorigin src="/wzsj/assets/index-BeJOt7Q8.js"></script>
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/runtime-core.esm-bundler-CjECEK8t.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/pinia-D3bx2cP8.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/account-D-lA9TFK.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+    <link rel="stylesheet" crossorigin href="/wzsj/assets/index-ZtGBu7MJ.css">
+  <script>try{var p=sessionStorage.getItem('pages-return-path');if(p){sessionStorage.removeItem('pages-return-path');if(p.startsWith('/wzsj/'))history.replaceState(null,'',p)}}catch(e){}</script><meta property="og:type" content="article">
+<meta property="og:site_name" content="ISEKAI">
+<meta property="og:title" content="截图这件事我分给两个软件：Snipaste 随手截，ShareX 干批量活">
+<meta property="og:description" content="Snipaste 的 F1 贴图是我每天按得最多的快捷键，看教程时把参考图钉在屏幕角落，在编辑器和浏览器之间来回对照特别方便，它的取色器也成了我写 CSS 时的默认工具。ShareX 则包揽所有麻烦事：滚动长截图、录屏转 GIF、截图后自动加水印并上传到我自己的图床、按窗口标题自动命名。">
+<meta property="og:url" content="https://hezhen66.github.io/wzsj/articles/snipaste-sharex">
+<meta property="og:image" content="https://picsum.photos/seed/blog-snipaste/1200/800">
+<meta property="article:published_time" content="2026-09-02"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="截图这件事我分给两个软件：Snipaste 随手截，ShareX 干批量活"><meta name="twitter:description" content="Snipaste 的 F1 贴图是我每天按得最多的快捷键，看教程时把参考图钉在屏幕角落，在编辑器和浏览器之间来回对照特别方便，它的取色器也成了我写 CSS 时的默认工具。ShareX 则包揽所有麻烦事：滚动长截图、录屏转 GIF、截图后自动加水印并上传到我自己的图床、按窗口标题自动命名。"><link rel="canonical" href="https://hezhen66.github.io/wzsj/articles/snipaste-sharex"></head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

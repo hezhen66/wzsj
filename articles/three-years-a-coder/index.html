@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-glass-default="off">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="大二第一次在 GitHub 提 issue，被 maintainer 回了一句 duplicate 就关了，那天我盯着邮件看了很久。大三起有人叫我「大佬」，我每次都心虚地笑一下转移话题。这篇写我是怎么从「照着教程抄三遍」走到能自己翻源码、读 RFC，以及到现在简历上都不敢写「精通」两个字——我总觉得那两个字是要负责的。">
+    <title>用了三年才敢说自己是写代码的 · ISEKAI</title>
+    <script>
+      // 首屏防闪烁：挂载前按 localStorage / 系统偏好先设好主题
+      ;(function () {
+        var t
+        try { t = localStorage.getItem('blog-theme') } catch (_) {}
+        if (/^(?:\/wzsj)?\/articles\/[^/]+\/?$/.test(window.location.pathname)) t = 'light'
+        if (t !== 'dark' && t !== 'light') {
+          t =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+        }
+        document.documentElement.setAttribute('data-theme', t)
+        var bg=null
+        try{bg=JSON.parse(localStorage.getItem('isekai.home-background.light.v2')||'null')}catch(_){}
+        if(!bg){try{var old=JSON.parse(localStorage.getItem('isekai.home-background.light.v1')||'null');if(old)bg={enabled:old.blurred}}catch(_){} }
+        var glass=bg&&typeof bg.enabled==='boolean'?bg.enabled:document.documentElement.getAttribute('data-glass-default')!=='off'
+        document.documentElement.setAttribute('data-glass-background',t==='light'&&glass?'on':'off')
+      })()
+    </script>
+    <style>html[data-theme=light][data-glass-background=on] body{background-color:#dbe0dc}</style>
+    <script type="module" crossorigin src="/wzsj/assets/index-BeJOt7Q8.js"></script>
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/runtime-core.esm-bundler-CjECEK8t.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/pinia-D3bx2cP8.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/account-D-lA9TFK.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+    <link rel="stylesheet" crossorigin href="/wzsj/assets/index-ZtGBu7MJ.css">
+  <script>try{var p=sessionStorage.getItem('pages-return-path');if(p){sessionStorage.removeItem('pages-return-path');if(p.startsWith('/wzsj/'))history.replaceState(null,'',p)}}catch(e){}</script><meta property="og:type" content="article">
+<meta property="og:site_name" content="ISEKAI">
+<meta property="og:title" content="用了三年才敢说自己是写代码的">
+<meta property="og:description" content="大二第一次在 GitHub 提 issue，被 maintainer 回了一句 duplicate 就关了，那天我盯着邮件看了很久。大三起有人叫我「大佬」，我每次都心虚地笑一下转移话题。这篇写我是怎么从「照着教程抄三遍」走到能自己翻源码、读 RFC，以及到现在简历上都不敢写「精通」两个字——我总觉得那两个字是要负责的。">
+<meta property="og:url" content="https://hezhen66.github.io/wzsj/articles/three-years-a-coder">
+<meta property="og:image" content="https://picsum.photos/seed/blog-coder/1600/1000">
+<meta property="article:published_time" content="2026-09-22"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="用了三年才敢说自己是写代码的"><meta name="twitter:description" content="大二第一次在 GitHub 提 issue，被 maintainer 回了一句 duplicate 就关了，那天我盯着邮件看了很久。大三起有人叫我「大佬」，我每次都心虚地笑一下转移话题。这篇写我是怎么从「照着教程抄三遍」走到能自己翻源码、读 RFC，以及到现在简历上都不敢写「精通」两个字——我总觉得那两个字是要负责的。"><link rel="canonical" href="https://hezhen66.github.io/wzsj/articles/three-years-a-coder"></head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

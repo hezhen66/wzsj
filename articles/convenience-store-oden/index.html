@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-glass-default="off">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="改一个 bug 改到两点半，下楼买关东煮，值夜的阿姨问「又熬夜啊」，我说快了。萝卜煮太久已经发黄，我坐在落地窗前一口一口吃完，回宿舍的路上突然发现——我少写了一个 await。那一刻我特别想笑，也特别不想笑。">
+    <title>凌晨两点半，楼下便利店的关东煮 · ISEKAI</title>
+    <script>
+      // 首屏防闪烁：挂载前按 localStorage / 系统偏好先设好主题
+      ;(function () {
+        var t
+        try { t = localStorage.getItem('blog-theme') } catch (_) {}
+        if (/^(?:\/wzsj)?\/articles\/[^/]+\/?$/.test(window.location.pathname)) t = 'light'
+        if (t !== 'dark' && t !== 'light') {
+          t =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+        }
+        document.documentElement.setAttribute('data-theme', t)
+        var bg=null
+        try{bg=JSON.parse(localStorage.getItem('isekai.home-background.light.v2')||'null')}catch(_){}
+        if(!bg){try{var old=JSON.parse(localStorage.getItem('isekai.home-background.light.v1')||'null');if(old)bg={enabled:old.blurred}}catch(_){} }
+        var glass=bg&&typeof bg.enabled==='boolean'?bg.enabled:document.documentElement.getAttribute('data-glass-default')!=='off'
+        document.documentElement.setAttribute('data-glass-background',t==='light'&&glass?'on':'off')
+      })()
+    </script>
+    <style>html[data-theme=light][data-glass-background=on] body{background-color:#dbe0dc}</style>
+    <script type="module" crossorigin src="/wzsj/assets/index-BeJOt7Q8.js"></script>
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/runtime-core.esm-bundler-CjECEK8t.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/pinia-D3bx2cP8.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/account-D-lA9TFK.js">
+    <link rel="modulepreload" crossorigin href="/wzsj/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+    <link rel="stylesheet" crossorigin href="/wzsj/assets/index-ZtGBu7MJ.css">
+  <script>try{var p=sessionStorage.getItem('pages-return-path');if(p){sessionStorage.removeItem('pages-return-path');if(p.startsWith('/wzsj/'))history.replaceState(null,'',p)}}catch(e){}</script><meta property="og:type" content="article">
+<meta property="og:site_name" content="ISEKAI">
+<meta property="og:title" content="凌晨两点半，楼下便利店的关东煮">
+<meta property="og:description" content="改一个 bug 改到两点半，下楼买关东煮，值夜的阿姨问「又熬夜啊」，我说快了。萝卜煮太久已经发黄，我坐在落地窗前一口一口吃完，回宿舍的路上突然发现——我少写了一个 await。那一刻我特别想笑，也特别不想笑。">
+<meta property="og:url" content="https://hezhen66.github.io/wzsj/articles/convenience-store-oden">
+<meta property="og:image" content="https://picsum.photos/seed/blog-convenience/1600/1000">
+<meta property="article:published_time" content="2026-09-06"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="凌晨两点半，楼下便利店的关东煮"><meta name="twitter:description" content="改一个 bug 改到两点半，下楼买关东煮，值夜的阿姨问「又熬夜啊」，我说快了。萝卜煮太久已经发黄，我坐在落地窗前一口一口吃完，回宿舍的路上突然发现——我少写了一个 await。那一刻我特别想笑，也特别不想笑。"><link rel="canonical" href="https://hezhen66.github.io/wzsj/articles/convenience-store-oden"></head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
